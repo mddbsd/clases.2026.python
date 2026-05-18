@@ -73,42 +73,51 @@
 #son correctas se le aplicara un descuento del 20% al total
 #sino, se mostrara el precio sin descuento
 
-usr = "admin"
-pwd = "12345"
-esVip = False
-usrIngresado = input("Ingrese usuario: ")
-pwdIngresada = input("Ingrese contraseña: ")
-if usrIngresado == usr and pwdIngresada == pwd:
-    print("El usuario es VIP, tiene descuento del 20%")
-    esVip = True
-else:
-    print("Usuario publico, sin descuento")
+#usr = "admin"
+#pwd = "12345"
+#esVip = False
+#usrIngresado = input("Ingrese usuario: ")
+#pwdIngresada = input("Ingrese contraseña: ")
+#if usrIngresado == usr and pwdIngresada == pwd:
+#    print("El usuario es VIP, tiene descuento del 20%")
+#    esVip = True
+#else:
+#    print("Usuario publico, sin descuento")
 
-listaProductos = []
-listaPrecios = []
-while True:
-    productoNombre = input("Ingrese producto: ")
-    if productoNombre == "terminar":
-        break
-    productoPrecio = float(input("Ingrese precio: "))
-    listaProductos.append(productoNombre)
-    listaPrecios.append(productoPrecio)
+#listaProductos = []
+#listaPrecios = []
+#while True:
+#    productoNombre = input("Ingrese producto: ")
+#    if productoNombre == "terminar":
+#        break
+#    productoPrecio = float(input("Ingrese precio: "))
+#    listaProductos.append(productoNombre)
+#    listaPrecios.append(productoPrecio)
 
-contador = 0
-acumulador = 0
+#contador = 0
+#acumulador = 0
 
-for x in listaProductos:
-    print(f"Producto: {x} Precio:{listaPrecios[contador]}$")
-    acumulador += listaPrecios[contador]
-    contador += 1
+#for x in listaProductos:
+#    print(f"Producto: {x} Precio:{listaPrecios[contador]}$")
+#    acumulador += listaPrecios[contador]
+#    contador += 1
 
-if esVip:
-    print(f"Total: {acumulador - (acumulador * 0.20)} con descuento")
-else:
-    print(f"Total: {acumulador} sin descuento")
+#if esVip:
+#    print(f"Total: {acumulador - (acumulador * 0.20)} con descuento")
+#else:
+#    print(f"Total: {acumulador} sin descuento")
 
 #Otra manera de expresar el total con f-strings
 #print(f"Total: {acumulador if not esVip else acumulador-(acumulador * 0.20)}")
 
 #Crear una funcion para cada uno de los ejercicios en esete archivo, y luego permitir al usuario
 #que elija cual ejercicio quiere probar
+
+while True:
+    print("Seleccion de ejercicio")
+    print("1: repeticion nombre")
+    print("2: credenciales")
+    print("3: credenciales con intentos")
+    print("4: lista de productos")
+    print("5: lista de productos con descuento")
+    print("Ingrese salir para terminar con el programa")
