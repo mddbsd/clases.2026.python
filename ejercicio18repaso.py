@@ -121,3 +121,19 @@ while True:
     print("4: lista de productos")
     print("5: lista de productos con descuento")
     print("Ingrese salir para terminar con el programa")
+    opcion = input("Ingrese opcion: ")
+    match opcion:
+        case "1":
+            print("opcion 1 seleccionada")
+        case "2":
+            print("opcion 2 seleccionada")
+        case "3":
+            print("opcion 3 seleccionada")
+        case "4":
+            print("opcion 4 seleccionada")
+        case "salir":
+            print("Programa cerrado")
+            break
+        case _: 
+            print("Opcion incorrecta, ingrese nuevamente")
+            
