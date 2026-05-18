@@ -2,12 +2,14 @@
 #y un numero entero e imprima en lineas distintas el nombbre
 #del usuario tantas veces como el numero introducido
 
-#nombre = input("Ingrese nombre: ")
-#ciclos = int(input("Ingrese cantidad de ciclos: "))
 
-#for x in range(ciclos):
-#    print(nombre)
 
+def ejercicio1():
+    nombre = input("Ingrese nombre: ")
+    ciclos = int(input("Ingrese cantidad de ciclos: "))
+
+    for x in range(ciclos):
+        print(nombre)
 ##Escribe un programa que solicite un usuario y contraseña.
 #Si las credenciales coinciden, mostrar el mensaje "Bienvenido al sistema"
 #Caso contrario mostrar el mensaje "Credenciales incorrectas"
@@ -124,7 +126,7 @@ while True:
     opcion = input("Ingrese opcion: ")
     match opcion:
         case "1":
-            print("opcion 1 seleccionada")
+            ejercicio1()
         case "2":
             print("opcion 2 seleccionada")
         case "3":
