@@ -1,8 +1,8 @@
+import os
+
 #Escribe un programa que pregunte el nombre del usuario 
 #y un numero entero e imprima en lineas distintas el nombbre
 #del usuario tantas veces como el numero introducido
-
-
 
 def ejercicio1():
     nombre = input("Ingrese nombre: ")
@@ -116,6 +116,7 @@ def ejercicio5():
 #que elija cual ejercicio quiere probar
 
 while True:
+    os.system("clear") #en windows utilizar cls en vez de clear
     print("Seleccion de ejercicio")
     print("1: repeticion nombre")
     print("2: credenciales")
@@ -124,20 +125,27 @@ while True:
     print("5: lista de productos con descuento")
     print("Ingrese salir para terminar con el programa")
     opcion = input("Ingrese opcion: ")
+    print()
     match opcion:
         case "1":
             ejercicio1()
+            input("Presione enter para continuar")
         case "2":
             ejercicio2()
+            input("Presione enter para continuar")
         case "3":
             ejercicio3()
+            input("Presione enter para continuar")
         case "4":
             ejercicio4()
+            input("Presione enter para continuar")
         case "5":
             ejercicio5()
+            input("Presione enter para continuar")
         case "salir":
+            os.system("clear")
             print("Programa cerrado")
             break
         case _: 
             print("Opcion incorrecta, ingrese nuevamente")
-            
+            input("Presione enter para continuar")
