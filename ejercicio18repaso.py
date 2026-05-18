@@ -28,86 +28,86 @@ def ejercicio2():
         print("Credenciales incorrectas")
 #Expandir el ejercicio anterior para que se le permita al usuario
 #3 intentos de ingreso. Mostrar tambien el numero de intento
+def ejercicio3():
+    usuario = "admin"
+    password = "123456"
+    contador = 0
 
-#usuario = "admin"
-#password = "123456"
-#contador = 0
+    while True:
+        usuarioIngresado = input("Ingrese usuario: ")
+        passwordIngresado = input("Ingrese contraseña: ")
 
-#while True:
-#    usuarioIngresado = input("Ingrese usuario: ")
-#    passwordIngresado = input("Ingrese contraseña: ")
-
-#    if usuario == usuarioIngresado and password == passwordIngresado:
-#        print("Bienvenido al sistema")
-#        break
-#    elif contador < 3:
-#        print(f"Credenciales incorrectas, intento {contador + 1} de 3")
-#        contador += 1
-#    else:
-#        print("Intentos agotados")
-#        break
+        if usuario == usuarioIngresado and password == passwordIngresado:
+            print("Bienvenido al sistema")
+            break
+        elif contador < 3:
+            print(f"Credenciales incorrectas, intento {contador + 1} de 3")
+            contador += 1
+        else:
+            print("Intentos agotados")
+            break
 #Crear una lista de compras: El usuario puede ingresar multiples elementos
 #con su nombre y precio, No se sabe cuantos elementos hay, el usuario
 #termina de ingresarlos con la palabra terminar en el ingreso del producto
 #Al final mostrar la lista de productos con sus precios y el total
+def ejercicio4():
+    listaProductos = []
+    listaPrecios = []
+    while True:
+        productoNombre = input("Ingrese producto: ")
+        if productoNombre == "terminar":
+            break
+        productoPrecio = float(input("Ingrese precio: "))
+        listaProductos.append(productoNombre)
+        listaPrecios.append(productoPrecio)
 
-#listaProductos = []
-#listaPrecios = []
-#while True:
-#    productoNombre = input("Ingrese producto: ")
-#    if productoNombre == "terminar":
-#        break
-#    productoPrecio = float(input("Ingrese precio: "))
-#    listaProductos.append(productoNombre)
-#    listaPrecios.append(productoPrecio)
+    contador = 0
+    acumulador = 0
 
-#contador = 0
-#acumulador = 0
-
-#for x in listaProductos:
-#    print(f"Producto: {x} Precio:{listaPrecios[contador]}$")
-#    acumulador += listaPrecios[contador]
-#    contador += 1
-#print(f"El total es: {acumulador}$")
+    for x in listaProductos:
+        print(f"Producto: {x} Precio:{listaPrecios[contador]}$")
+        acumulador += listaPrecios[contador]
+        contador += 1
+    print(f"El total es: {acumulador}$")
 
 #Combinar el ejercicio de login con el de productos
 #Presentarle al usuario la pantalla de login, si las credenciales
 #son correctas se le aplicara un descuento del 20% al total
 #sino, se mostrara el precio sin descuento
+def ejercicio5():
+    usr = "admin"
+    pwd = "12345"
+    esVip = False
+    usrIngresado = input("Ingrese usuario: ")
+    pwdIngresada = input("Ingrese contraseña: ")
+    if usrIngresado == usr and pwdIngresada == pwd:
+        print("El usuario es VIP, tiene descuento del 20%")
+        esVip = True
+    else:
+        print("Usuario publico, sin descuento")
 
-#usr = "admin"
-#pwd = "12345"
-#esVip = False
-#usrIngresado = input("Ingrese usuario: ")
-#pwdIngresada = input("Ingrese contraseña: ")
-#if usrIngresado == usr and pwdIngresada == pwd:
-#    print("El usuario es VIP, tiene descuento del 20%")
-#    esVip = True
-#else:
-#    print("Usuario publico, sin descuento")
+    listaProductos = []
+    listaPrecios = []
+    while True:
+        productoNombre = input("Ingrese producto: ")
+        if productoNombre == "terminar":
+            break
+        productoPrecio = float(input("Ingrese precio: "))
+        listaProductos.append(productoNombre)
+        listaPrecios.append(productoPrecio)
 
-#listaProductos = []
-#listaPrecios = []
-#while True:
-#    productoNombre = input("Ingrese producto: ")
-#    if productoNombre == "terminar":
-#        break
-#    productoPrecio = float(input("Ingrese precio: "))
-#    listaProductos.append(productoNombre)
-#    listaPrecios.append(productoPrecio)
+    contador = 0
+    acumulador = 0
 
-#contador = 0
-#acumulador = 0
+    for x in listaProductos:
+        print(f"Producto: {x} Precio:{listaPrecios[contador]}$")
+        acumulador += listaPrecios[contador]
+        contador += 1
 
-#for x in listaProductos:
-#    print(f"Producto: {x} Precio:{listaPrecios[contador]}$")
-#    acumulador += listaPrecios[contador]
-#    contador += 1
-
-#if esVip:
-#    print(f"Total: {acumulador - (acumulador * 0.20)} con descuento")
-#else:
-#    print(f"Total: {acumulador} sin descuento")
+    if esVip:
+        print(f"Total: {acumulador - (acumulador * 0.20)} con descuento")
+    else:
+        print(f"Total: {acumulador} sin descuento")
 
 #Otra manera de expresar el total con f-strings
 #print(f"Total: {acumulador if not esVip else acumulador-(acumulador * 0.20)}")
@@ -130,9 +130,11 @@ while True:
         case "2":
             ejercicio2()
         case "3":
-            print("opcion 3 seleccionada")
+            ejercicio3()
         case "4":
-            print("opcion 4 seleccionada")
+            ejercicio4()
+        case "5":
+            ejercicio5()
         case "salir":
             print("Programa cerrado")
             break
