@@ -15,17 +15,17 @@ def ejercicio1():
 #Caso contrario mostrar el mensaje "Credenciales incorrectas"
 #Las credenciales las define el programador
 
-#usuario = "admin"
-#password = "123456"
+def ejercicio2():
+    usuario = "admin"
+    password = "123456"
 
-#usuarioIngresado = input("Ingrese usuario: ")
-#passwordIngresado = input("Ingrese contraseña: ")
+    usuarioIngresado = input("Ingrese usuario: ")
+    passwordIngresado = input("Ingrese contraseña: ")
 
-#if usuario == usuarioIngresado and password == passwordIngresado:
-    #print("Bienvenido al sistema")
-#else:
-    #print("Credenciales incorrectas")
-
+    if usuario == usuarioIngresado and password == passwordIngresado:
+        print("Bienvenido al sistema")
+    else:
+        print("Credenciales incorrectas")
 #Expandir el ejercicio anterior para que se le permita al usuario
 #3 intentos de ingreso. Mostrar tambien el numero de intento
 
@@ -128,7 +128,7 @@ while True:
         case "1":
             ejercicio1()
         case "2":
-            print("opcion 2 seleccionada")
+            ejercicio2()
         case "3":
             print("opcion 3 seleccionada")
         case "4":
